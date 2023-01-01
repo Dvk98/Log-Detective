@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">-->
+
+    <link rel="stylesheet" href="css/pico.min.css">
+  </head>
+  <body>
+    <header class="container">
+        <hgroup>
+            <h1>HTTP response status codes</h1>
+            <p>HTTP response status codes indicate whether a specific HTTP request has been successfully completed.</p>
+            <ol>
+                <li>Informational responses (100 – 199)</li>
+                <li>Successful responses (200 – 299)</li>
+                <li>Redirection messages (300 – 399)</li>
+                <li>Client error responses (400 – 499)</li>
+                <li>Server error responses (500 – 599)</li>
+            </ol>
+        </hgroup> 
+    </header>
+    <main class="container">
+        <section id="Structure">
+            <h2>Important Codes</h2>
+            <h3>200 OK</h3>
+            <p>The request has succeeded. The information returned with the response is dependent on the method used in the request, for example:</p>
+            <ul>
+                <li>GET an entity corresponding to the requested resource is sent in the response;</li>
+                <li>HEAD the entity-header fields corresponding to the requested resource are sent in the response without any message-body;</li>
+                <li>POST an entity describing or containing the result of the action;</li>
+                <li>TRACE an entity containing the request message as received by the end server.</li>
+            </ul>
+            <h3>301 Moved Permanently</h3>
+            <p>The requested resource has been assigned a new permanent URI and any future references to this resource should use one of the returned URIs. Clients with link editing capabilities ought to automatically re-link references to the Request-URI to one or more of the new references returned by the server, where possible. This response is cacheable unless indicated otherwise.</p>
+            <h3>400 Bad Request</h3>
+            <p>The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modifications.</p>
+            <h3>401 Unauthorized</h3>
+            <p>The request requires user authentication. The response MUST include a WWW-Authenticate header field containing a challenge applicable to the requested resource. The client MAY repeat the request with a suitable Authorization header field. If the request already included Authorization credentials, then the 401 response indicates that authorization has been refused for those credentials. If the 401 response contains the same challenge as the prior response, and the user agent has already attempted authentication at least once, then the user SHOULD be presented the entity that was given in the response, since that entity might include relevant diagnostic information.</p>
+            <h3>403 Forbidden</h3>
+            <p>The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource. Unlike 401 Unauthorized, the client's identity is known to the server.</p>
+            <h3>500 Internal Server Error</h3>
+            <p>The server encountered an unexpected condition which prevented it from fulfilling the request.</p>
+
+
+            <h2>More Information:</h2>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">Mozilla</a></p>
+        </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">-->
+
+    <link rel="stylesheet" href="css/pico.min.css">
+  </head>
+  <body>
+    <header class="container">
+        <hgroup>
+            <h1>Path Traversal (../)</h1>
+            <p>Path traversal is a web security vulnerability that allows an attacker to read arbitrary files on the server that is running an application. Path traversal attacks take advantage of the way web servers handle files and directories. When a web server is asked for a file, it looks for the file in a specific directory. If the file is not found in that directory, the web server may look in other directories. This is called directory traversal. Path traversal attacks take advantage of this behavior to read arbitrary files on the web server. Path traversal attacks are possible when an application takes user input and uses that input to look for a file on the server. If the application does not properly validate the user input, an attacker may be able to manipulate the input to read arbitrary files on the server. Path traversal attacks are possible when an application takes user input and uses that input to look for a file on the server. If the application does not properly validate the user input, an attacker may be able to manipulate the input to read arbitrary files on the server.</p>
+            <p><br></p>
+            <p>Generic Payloads include: </p>
+            <ul>
+                <li>/etc/passwd</li>
+                <li>/etc/passwd%00</li>
+                <li>../etc/passwd</li>
+                <li>../../etc/passwd</li>
+                <li>.../...//etc/passwd</li>
+                <li> and much more</li>
+            </ul>
+            <p><br></p>
+            <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Directory%20Traversal/README.md">More here</a>
+        </hgroup> 
+    </header>
+    <main class="container">
+        <section id="Path Traversal (../)">
+            <h3>Path Traversal</h3>
+            <p>We can detect Path Traversal in an application through an access log by taking a look at url parameters that are used in a request</p>
+        </section>
+    </main>
+  </body>
+</html>

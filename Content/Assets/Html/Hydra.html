@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">-->
+
+    <link rel="stylesheet" href="css/pico.min.css">
+  </head>
+  <body>
+    <header class="container">
+        <hgroup>
+            <h1>Bruteforce - Hydra</h1>
+            <p>Hydra is a linux tool from the THC group, which enables the attacker to try countless passwords against password protected endpoints. The attacker has to generate or download a password list themself.</p>
+            <p>Hydra is a very powerful tool, but it is also very easy to use. The attacker can use the tool to brute force a variety of services, including SSH, FTP, HTTP, HTTPS, Telnet, POP3, IMAP, SMB, VNC, RDP, and many more.</p>
+            <a href="https://github.com/vanhauser-thc/thc-hydra">More info here</a>
+        </hgroup> 
+    </header>
+    <main class="container">
+        <section id="Detection">
+            <h3>Detection</h3>
+            <p>When we want to detect a bruteforce attack, we can either look out for the user agent string, which could contain "hydra", or watch out for repeatedly failing login attempts in a short period of time. The time period could also be larger, when the attacker wants to hide the fact that he is attempting a bruteforce attack.</p>
+        </section>
+    </main>
+  </body>
+</html>

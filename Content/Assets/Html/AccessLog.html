@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">-->
+
+    <link rel="stylesheet" href="css/pico.min.css">
+  </head>
+  <body>
+    <header class="container">
+        <hgroup>
+            <h1>Understanding Access Logs</h1>
+            <p>Access logs are a record of all requests made to a site. They are a great way to see what pages are being viewed, how often, and by whom. Additionnaly, this file can be used to find errors in the site.</p>
+        </hgroup> 
+    </header>
+    <main class="container">
+        <section id="Structure">
+            <h2>Structure</h2>
+            <h3>Common Log Format</h3>
+            <figure>
+                <table role="grid">
+                    <thead>
+                        <tr>
+                            <th scope="col">IP-Address</th>
+                            <th scope="col">Client Identity</th>
+                            <th scope="col">UserID</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Request</th>
+                            <th scope="col">Response Code</th>
+                            <th scope="col">Returned Object Size</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>127.0.0.1</td>
+                            <td>-</td>
+                            <td>Heinz</td>
+                            <td>[14/Sep/2022:13:55:36 -0700]</td>
+                            <td>“GET /server-status HTTP/1.1"</td>
+                            <td>200</td>
+                            <td>2248</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </figure>
+            <h3>Combined Log Format</h3>
+            <figure>
+                <table role="grid">
+                    <thead>
+                        <tr>
+                            <th scope="col">IP-Address</th>
+                            <th scope="col">Client Identity</th>
+                            <th scope="col">UserID</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Request</th>
+                            <th scope="col">Response Code</th>
+                            <th scope="col">Object Size</th>
+                            <th scope="col">Referer</th>
+                            <th scope="col">User Agent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>127.0.0.1</td>
+                            <td>-</td>
+                            <td>Heinz</td>
+                            <td>[14/Sep/2022:13:55:36 -0700]</td>
+                            <td>“GET /server-status HTTP/1.1"</td>
+                            <td>200</td>
+                            <td>2248</td>
+                            <td>"http://localhost/"</td>
+                            <td>"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </figure>
+        </section>
+    </main>
+  </body>
+</html>
